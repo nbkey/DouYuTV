@@ -24,5 +24,6 @@ class MainViewController: UITabBarController {
         let chlidVc = UIStoryboard(name: ChildViewControllerName, bundle: nil).instantiateInitialViewController()!
         //忘tabbar里面添加控制器
         addChildViewController(chlidVc)
+        
     }    
 }
