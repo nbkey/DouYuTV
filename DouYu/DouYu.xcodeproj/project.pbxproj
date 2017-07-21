@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1744D1F217EFB00F3A5C5 /* AppDelegate.swift */; };
-		3FB174501F217EFB00F3A5C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1744F1F217EFB00F3A5C5 /* ViewController.swift */; };
 		3FB174531F217EFB00F3A5C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB174511F217EFB00F3A5C5 /* Main.storyboard */; };
 		3FB174551F217EFB00F3A5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB174541F217EFB00F3A5C5 /* Assets.xcassets */; };
 		3FB174581F217EFB00F3A5C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB174561F217EFB00F3A5C5 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		3FB1744A1F217EFB00F3A5C5 /* DouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB1744D1F217EFB00F3A5C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FB1744F1F217EFB00F3A5C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FB174521F217EFB00F3A5C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FB174541F217EFB00F3A5C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FB174571F217EFB00F3A5C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,69 @@
 		3FB1744C1F217EFB00F3A5C5 /* DouYu */ = {
 			isa = PBXGroup;
 			children = (
+				3FB1745F1F21A3A600F3A5C5 /* Classes */,
 				3FB1744D1F217EFB00F3A5C5 /* AppDelegate.swift */,
-				3FB1744F1F217EFB00F3A5C5 /* ViewController.swift */,
 				3FB174511F217EFB00F3A5C5 /* Main.storyboard */,
 				3FB174541F217EFB00F3A5C5 /* Assets.xcassets */,
 				3FB174561F217EFB00F3A5C5 /* LaunchScreen.storyboard */,
 				3FB174591F217EFB00F3A5C5 /* Info.plist */,
 			);
 			path = DouYu;
+			sourceTree = "<group>";
+		};
+		3FB1745F1F21A3A600F3A5C5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3FB174631F21A3A600F3A5C5 /* Main */,
+				3FB174611F21A3A600F3A5C5 /* Home */,
+				3FB174621F21A3A600F3A5C5 /* Live */,
+				3FB174601F21A3A600F3A5C5 /* Follow */,
+				3FB174641F21A3A600F3A5C5 /* Podfile */,
+				3FB174651F21A3A600F3A5C5 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3FB174601F21A3A600F3A5C5 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		3FB174611F21A3A600F3A5C5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3FB174621F21A3A600F3A5C5 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		3FB174631F21A3A600F3A5C5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3FB174641F21A3A600F3A5C5 /* Podfile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Podfile;
+			sourceTree = "<group>";
+		};
+		3FB174651F21A3A600F3A5C5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB174501F217EFB00F3A5C5 /* ViewController.swift in Sources */,
 				3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
