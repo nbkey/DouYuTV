@@ -24,7 +24,7 @@ extension UIBarButtonItem {
     
     //扩充构造函数(便利构造函数)
     //1>convenience开头
-    //2>在构造函数中必须明确的调用一个设计的构造函数(self)
+    //2>在构造函数中必须明确的调用一个设计的构造函数(self), 赋初始化的值可以被选择
     convenience init(imaged:String, highImageNamed: String = "", size: CGSize = CGSize.zero) {
         let btn = UIButton()
         btn.setImage(UIImage(named:imaged), for: .normal)
@@ -39,4 +39,5 @@ extension UIBarButtonItem {
         
         self.init(customView: btn)
     }
+        
 }

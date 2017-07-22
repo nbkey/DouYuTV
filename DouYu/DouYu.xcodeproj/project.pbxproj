@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F99DD431F238F630012CEA2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD421F238F630012CEA2 /* Common.swift */; };
+		3F99DD451F2394C70012CEA2 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD441F2394C70012CEA2 /* PageTitleView.swift */; };
+		3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD461F23A6F90012CEA2 /* PageContentView.swift */; };
+		3F99DD491F23A90D0012CEA2 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD481F23A90D0012CEA2 /* UIColor-Extension.swift */; };
 		3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1744D1F217EFB00F3A5C5 /* AppDelegate.swift */; };
 		3FB174551F217EFB00F3A5C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB174541F217EFB00F3A5C5 /* Assets.xcassets */; };
 		3FB174581F217EFB00F3A5C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB174561F217EFB00F3A5C5 /* LaunchScreen.storyboard */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F99DD421F238F630012CEA2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		3F99DD441F2394C70012CEA2 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		3F99DD461F23A6F90012CEA2 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		3F99DD481F23A90D0012CEA2 /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		3FB1744A1F217EFB00F3A5C5 /* DouYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB1744D1F217EFB00F3A5C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB174541F217EFB00F3A5C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB174891F21B9AB00F3A5C5 /* Extension */,
+				3F99DD421F238F630012CEA2 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -182,6 +191,8 @@
 		3FB174851F21B5B000F3A5C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F99DD441F2394C70012CEA2 /* PageTitleView.swift */,
+				3F99DD461F23A6F90012CEA2 /* PageContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				3FB1748A1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift */,
+				3F99DD481F23A90D0012CEA2 /* UIColor-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -271,9 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F99DD451F2394C70012CEA2 /* PageTitleView.swift in Sources */,
+				3F99DD491F23A90D0012CEA2 /* UIColor-Extension.swift in Sources */,
 				3FB174861F21B5B000F3A5C5 /* MainViewController.swift in Sources */,
 				3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */,
+				3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */,
 				3FB1748B1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift in Sources */,
+				3F99DD431F238F630012CEA2 /* Common.swift in Sources */,
 				3FB174881F21B62200F3A5C5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
