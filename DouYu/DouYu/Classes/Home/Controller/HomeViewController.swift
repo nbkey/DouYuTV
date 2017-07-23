@@ -13,14 +13,16 @@ private let kTitleViewH : CGFloat = 40
 class HomeViewController: UIViewController {
     
     // MARK:-懒加载
-    fileprivate lazy var pageTitleView :PageTitleView = {
+    fileprivate lazy var pageTitleView :PageTitleView = {[weak self] in
         let frame = CGRect(x: 0, y: kNavigationH, width: kScreenWidth, height:  kTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let pageTitleView = PageTitleView(frame: frame, titles: titles)
+        pageTitleView.delegate = self
+        
         return pageTitleView
     }()
     
-    fileprivate lazy var pageContentView :PageContentView = {
+    fileprivate lazy var pageContentView :PageContentView = {[weak self] in
         //1.确定frame
         let contentH = kScreenHight - kNavigationH - kTitleViewH
         let frame = CGRect(x: 0, y: kNavigationH + kTitleViewH, width: kScreenWidth, height: contentH)
@@ -32,6 +34,7 @@ class HomeViewController: UIViewController {
             childVCs.append(vc)
         }
         let pageContentView = PageContentView(frame: frame, childViewControllers: childVCs, parentViewController: self)
+        pageContentView.delegate = self
         return pageContentView
     }()
     
@@ -74,7 +77,19 @@ extension HomeViewController {
         let qrcode = UIBarButtonItem(imaged: "Image_scan", highImageNamed: "Image_scan_click", size: size)
         navigationItem.rightBarButtonItems = [historyBtn, searchBtn, qrcode]
     }
+}
 
-    
-    
+// MARK:-PageTitleViewDelegate
+extension HomeViewController:PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, index: Int) {
+        print(index)
+        pageContentView.setCurrentIndex(index)
+    }
+}
+
+// MARK:-PageContentViewDelegate
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentView(progress: CGFloat, scoureIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, scoureIndex: scoureIndex, targetIndex: targetIndex)
+    }
 }
