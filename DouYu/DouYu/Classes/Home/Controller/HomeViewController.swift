@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     // MARK:-懒加载
     fileprivate lazy var pageTitleView :PageTitleView = {[weak self] in
         let frame = CGRect(x: 0, y: kNavigationH, width: kScreenWidth, height:  kTitleViewH)
-        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let titles = ["推荐", "手游","娱乐啊啊", "游戏啊", "趣玩"]
         let pageTitleView = PageTitleView(frame: frame, titles: titles)
         pageTitleView.delegate = self
         
@@ -24,10 +24,11 @@ class HomeViewController: UIViewController {
     
     fileprivate lazy var pageContentView :PageContentView = {[weak self] in
         //1.确定frame
-        let contentH = kScreenHight - kNavigationH - kTitleViewH
+        let contentH = kScreenHight - kNavigationH - kTitleViewH - kTabBarH
         let frame = CGRect(x: 0, y: kNavigationH + kTitleViewH, width: kScreenWidth, height: contentH)
         //2.确定子控制器
         var childVCs = [UIViewController]()
+        childVCs.append(RecommendViewController())
         for _ in 0..<4 {
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
@@ -67,15 +68,46 @@ extension HomeViewController {
     
     private func setNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(imaged: "logo")
-        
-//        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named:"logo"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(aaa))
-        
+        setActionWithNavigationItem(barButtonItem: navigationItem.leftBarButtonItem, action: #selector(leftBarButtonClick))
+
         //2.设置右侧的Item
         let size = CGSize(width: 40, height: 40)
         let historyBtn = UIBarButtonItem(imaged: "image_my_history", highImageNamed: "Image_my_history_click", size: size)
+        setActionWithNavigationItem(barButtonItem: historyBtn, action: #selector(historyBtnClick))
         let searchBtn = UIBarButtonItem(imaged: "btn_search", highImageNamed: "btn_search_click", size: size)
-        let qrcode = UIBarButtonItem(imaged: "Image_scan", highImageNamed: "Image_scan_click", size: size)
-        navigationItem.rightBarButtonItems = [historyBtn, searchBtn, qrcode]
+        setActionWithNavigationItem(barButtonItem: searchBtn, action: #selector(searchBtnClick))
+        let qrcodeBtn = UIBarButtonItem(imaged: "Image_scan", highImageNamed: "Image_scan_click", size: size)
+        setActionWithNavigationItem(barButtonItem: qrcodeBtn, action: #selector(qrcodeBtnClick))
+        navigationItem.rightBarButtonItems = [historyBtn, searchBtn, qrcodeBtn]
+    }
+}
+
+
+// MARK:-导航栏按钮点击事件
+extension HomeViewController {
+    @objc fileprivate func leftBarButtonClick() {
+        print("测试首页导航栏左侧点击事件")
+    }
+    
+    @objc fileprivate func historyBtnClick() {
+        print("测试首页导航栏观看历史点击事件")
+    }
+    
+    @objc fileprivate func searchBtnClick() {
+        print("测试首页导航栏搜索点击事件")
+    }
+    
+    @objc fileprivate func qrcodeBtnClick() {
+        print("测试首页导航栏查二维码扫描点击事件")
+    }
+    
+    
+    fileprivate func setActionWithNavigationItem(barButtonItem: UIBarButtonItem?, action: Selector) {
+        //因为customView是uiview, 所以需要可选类型保护
+        guard let button = barButtonItem?.customView as? UIButton else {
+            return
+        }
+        button.addTarget(self, action: action, for: UIControlEvents.touchUpInside)
     }
 }
 

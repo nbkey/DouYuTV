@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F26255D1F24DE75006DD66F /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26255C1F24DE75006DD66F /* RecommendViewController.swift */; };
 		3F99DD431F238F630012CEA2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD421F238F630012CEA2 /* Common.swift */; };
 		3F99DD451F2394C70012CEA2 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD441F2394C70012CEA2 /* PageTitleView.swift */; };
 		3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD461F23A6F90012CEA2 /* PageContentView.swift */; };
@@ -22,9 +23,14 @@
 		3FB174861F21B5B000F3A5C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB174831F21B5B000F3A5C5 /* MainViewController.swift */; };
 		3FB174881F21B62200F3A5C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB174871F21B62200F3A5C5 /* HomeViewController.swift */; };
 		3FB1748B1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB1748A1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift */; };
+		3FB5C6E31F25C38900CA8541 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E11F25C38900CA8541 /* CollectionHeaderView.swift */; };
+		3FB5C6E41F25C38900CA8541 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E21F25C38900CA8541 /* CollectionHeaderView.xib */; };
+		3FB5C6E71F25DCC700CA8541 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E51F25DCC700CA8541 /* CollectionNormalCell.swift */; };
+		3FB5C6E81F25DCC700CA8541 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E61F25DCC700CA8541 /* CollectionNormalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F26255C1F24DE75006DD66F /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		3F99DD421F238F630012CEA2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		3F99DD441F2394C70012CEA2 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		3F99DD461F23A6F90012CEA2 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +48,10 @@
 		3FB174831F21B5B000F3A5C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3FB174871F21B62200F3A5C5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3FB1748A1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
+		3FB5C6E11F25C38900CA8541 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		3FB5C6E21F25C38900CA8541 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		3FB5C6E51F25DCC700CA8541 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		3FB5C6E61F25DCC700CA8541 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,7 @@
 			children = (
 				3FB174751F21AEB400F3A5C5 /* Home.storyboard */,
 				3FB174871F21B62200F3A5C5 /* HomeViewController.swift */,
+				3F26255C1F24DE75006DD66F /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +180,8 @@
 		3FB174811F21B55300F3A5C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3FB5C6E11F25C38900CA8541 /* CollectionHeaderView.swift */,
+				3FB5C6E21F25C38900CA8541 /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +206,8 @@
 			children = (
 				3F99DD441F2394C70012CEA2 /* PageTitleView.swift */,
 				3F99DD461F23A6F90012CEA2 /* PageContentView.swift */,
+				3FB5C6E51F25DCC700CA8541 /* CollectionNormalCell.swift */,
+				3FB5C6E61F25DCC700CA8541 /* CollectionNormalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB174741F21AE8700F3A5C5 /* Main.storyboard in Resources */,
+				3FB5C6E41F25C38900CA8541 /* CollectionHeaderView.xib in Resources */,
+				3FB5C6E81F25DCC700CA8541 /* CollectionNormalCell.xib in Resources */,
 				3FB174581F217EFB00F3A5C5 /* LaunchScreen.storyboard in Resources */,
 				3FB174551F217EFB00F3A5C5 /* Assets.xcassets in Resources */,
 				3FB174781F21AEE100F3A5C5 /* Live.storyboard in Resources */,
@@ -284,12 +301,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F99DD451F2394C70012CEA2 /* PageTitleView.swift in Sources */,
+				3FB5C6E31F25C38900CA8541 /* CollectionHeaderView.swift in Sources */,
 				3F99DD491F23A90D0012CEA2 /* UIColor-Extension.swift in Sources */,
+				3F26255D1F24DE75006DD66F /* RecommendViewController.swift in Sources */,
 				3FB174861F21B5B000F3A5C5 /* MainViewController.swift in Sources */,
 				3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */,
 				3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */,
 				3FB1748B1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift in Sources */,
 				3F99DD431F238F630012CEA2 /* Common.swift in Sources */,
+				3FB5C6E71F25DCC700CA8541 /* CollectionNormalCell.swift in Sources */,
 				3FB174881F21B62200F3A5C5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
