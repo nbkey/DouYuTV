@@ -12,6 +12,7 @@
 		3F67DB371F2784D000A76530 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB361F2784D000A76530 /* NSDate-Extension.swift */; };
 		3F67DB391F278DC300A76530 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB381F278DC300A76530 /* AnchorGroup.swift */; };
 		3F67DB3B1F27903A00A76530 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB3A1F27903A00A76530 /* AnchorModel.swift */; };
+		3F67DB3D1F27C2ED00A76530 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB3C1F27C2ED00A76530 /* CollectionBaseCell.swift */; };
 		3F99DD431F238F630012CEA2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD421F238F630012CEA2 /* Common.swift */; };
 		3F99DD451F2394C70012CEA2 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD441F2394C70012CEA2 /* PageTitleView.swift */; };
 		3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD461F23A6F90012CEA2 /* PageContentView.swift */; };
@@ -44,6 +45,7 @@
 		3F67DB361F2784D000A76530 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
 		3F67DB381F278DC300A76530 /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
 		3F67DB3A1F27903A00A76530 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		3F67DB3C1F27C2ED00A76530 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		3F99DD421F238F630012CEA2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		3F99DD441F2394C70012CEA2 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		3F99DD461F23A6F90012CEA2 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			children = (
 				3F99DD441F2394C70012CEA2 /* PageTitleView.swift */,
 				3F99DD461F23A6F90012CEA2 /* PageContentView.swift */,
+				3F67DB3C1F27C2ED00A76530 /* CollectionBaseCell.swift */,
 				3FB5C6E51F25DCC700CA8541 /* CollectionNormalCell.swift */,
 				3FB5C6E61F25DCC700CA8541 /* CollectionNormalCell.xib */,
 				3F9CE88A1F26D39A001E48F3 /* CollectionPrettyCell.swift */,
@@ -417,6 +420,7 @@
 				3F99DD431F238F630012CEA2 /* Common.swift in Sources */,
 				3F9CE88C1F26D39A001E48F3 /* CollectionPrettyCell.swift in Sources */,
 				3F67DB371F2784D000A76530 /* NSDate-Extension.swift in Sources */,
+				3F67DB3D1F27C2ED00A76530 /* CollectionBaseCell.swift in Sources */,
 				3FB5C6E71F25DCC700CA8541 /* CollectionNormalCell.swift in Sources */,
 				3F9CE8911F275E13001E48F3 /* NetworkTools.swift in Sources */,
 				3FB174881F21B62200F3A5C5 /* HomeViewController.swift in Sources */,

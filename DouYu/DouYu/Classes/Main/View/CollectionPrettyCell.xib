@@ -24,7 +24,7 @@
                             <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         </state>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美丽直播秀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-Sf-5wj">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美丽直播秀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-Sf-5wj" customClass="CollectviewPrettyCell">
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="Lit-UE-RhN"/>
                         </constraints>
@@ -40,10 +40,10 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-5I-SCM">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAi-5I-SCM">
                         <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="0O4-KY-hiG"/>
+                            <constraint firstAttribute="width" constant="50" id="0O4-KY-hiG"/>
                             <constraint firstAttribute="height" constant="20" id="gtl-Bl-xQd"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -74,9 +74,9 @@
             </constraints>
             <size key="customSize" width="131" height="141"/>
             <connections>
+                <outlet property="anchorNameLabel" destination="pMa-Sf-5wj" id="VZc-SF-365"/>
                 <outlet property="cityButton" destination="UFX-JC-uAU" id="gca-OV-vWO"/>
                 <outlet property="iconImageView" destination="5Ru-Hi-7YM" id="hBe-u2-MOA"/>
-                <outlet property="nickNameLabel" destination="pMa-Sf-5wj" id="PMb-pQ-UvT"/>
                 <outlet property="onlineButton" destination="xAi-5I-SCM" id="dso-ac-fwi"/>
             </connections>
             <point key="canvasLocation" x="-16.5" y="87.5"/>

@@ -122,11 +122,13 @@ extension PageTitleView {
 // MARK:-监听label事件
 extension PageTitleView {
     @objc fileprivate func titleLabelCilck(tapRes: UITapGestureRecognizer)  {
+        
         //1.获取当前label
         guard let currentLabel = tapRes.view as? UILabel else {return}
+        //0.如果是重复点击
+        if currentIndex == currentLabel.tag {return}
         //2.获取之前的label
         let oldLabel = titleLabels[currentIndex]
-        
         //3.切换文字的颜色
         currentLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
         oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
