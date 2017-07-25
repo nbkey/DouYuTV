@@ -54,7 +54,11 @@
                 <constraint firstAttribute="trailing" secondItem="EIh-y8-KJZ" secondAttribute="trailing" id="u7H-tN-Gtx"/>
                 <constraint firstItem="xYx-2w-KVg" firstAttribute="centerY" secondItem="GdY-Rd-XSE" secondAttribute="centerY" id="wfX-zR-vKn"/>
             </constraints>
-            <point key="canvasLocation" x="-203" y="56"/>
+            <connections>
+                <outlet property="iconImageView" destination="GdY-Rd-XSE" id="vkh-Sq-vLF"/>
+                <outlet property="titleLabel" destination="xYx-2w-KVg" id="5XL-ug-MBz"/>
+            </connections>
+            <point key="canvasLocation" x="-45" y="23"/>
         </collectionReusableView>
     </objects>
     <resources>

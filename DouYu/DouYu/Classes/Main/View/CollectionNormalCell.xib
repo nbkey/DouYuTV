@@ -38,7 +38,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80L-XJ-8M7">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80L-XJ-8M7">
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="9999在线" image="Image_online"/>
                     </button>
@@ -60,7 +60,13 @@
                 <constraint firstItem="gEl-A4-fq1" firstAttribute="top" secondItem="tb5-yU-RGr" secondAttribute="bottom" constant="5" id="tXK-hM-fLy"/>
             </constraints>
             <size key="customSize" width="199" height="129"/>
-            <point key="canvasLocation" x="-44.5" y="-25.5"/>
+            <connections>
+                <outlet property="anchorNameLabel" destination="IoM-sk-xLp" id="8Ws-Qj-yk9"/>
+                <outlet property="iconImageView" destination="tb5-yU-RGr" id="q8O-z2-RwM"/>
+                <outlet property="nickNameLabel" destination="gEl-A4-fq1" id="YHP-kl-Hev"/>
+                <outlet property="onlineButton" destination="80L-XJ-8M7" id="3bu-H7-Fa6"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="-61"/>
         </collectionViewCell>
     </objects>
     <resources>

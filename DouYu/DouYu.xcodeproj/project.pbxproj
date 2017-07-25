@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F26255D1F24DE75006DD66F /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26255C1F24DE75006DD66F /* RecommendViewController.swift */; };
+		3F67DB351F27817800A76530 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB341F27817800A76530 /* RecommendViewModel.swift */; };
+		3F67DB371F2784D000A76530 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB361F2784D000A76530 /* NSDate-Extension.swift */; };
+		3F67DB391F278DC300A76530 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB381F278DC300A76530 /* AnchorGroup.swift */; };
+		3F67DB3B1F27903A00A76530 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67DB3A1F27903A00A76530 /* AnchorModel.swift */; };
 		3F99DD431F238F630012CEA2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD421F238F630012CEA2 /* Common.swift */; };
 		3F99DD451F2394C70012CEA2 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD441F2394C70012CEA2 /* PageTitleView.swift */; };
 		3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F99DD461F23A6F90012CEA2 /* PageContentView.swift */; };
@@ -36,6 +40,10 @@
 /* Begin PBXFileReference section */
 		315D55E843B270A69214C045 /* Pods_DouYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F26255C1F24DE75006DD66F /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		3F67DB341F27817800A76530 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		3F67DB361F2784D000A76530 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		3F67DB381F278DC300A76530 /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		3F67DB3A1F27903A00A76530 /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		3F99DD421F238F630012CEA2 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		3F99DD441F2394C70012CEA2 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		3F99DD461F23A6F90012CEA2 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F67DB331F27812E00A76530 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F67DB341F27817800A76530 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3FB174411F217EFB00F3A5C5 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +164,7 @@
 		3FB174611F21A3A600F3A5C5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3F67DB331F27812E00A76530 /* ViewModel */,
 				3FB1747F1F21B55300F3A5C5 /* Controller */,
 				3FB174801F21B55300F3A5C5 /* Model */,
 				3FB174811F21B55300F3A5C5 /* View */,
@@ -228,6 +245,8 @@
 		3FB174841F21B5B000F3A5C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F67DB381F278DC300A76530 /* AnchorGroup.swift */,
+				3F67DB3A1F27903A00A76530 /* AnchorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +269,7 @@
 			children = (
 				3FB1748A1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift */,
 				3F99DD481F23A90D0012CEA2 /* UIColor-Extension.swift */,
+				3F67DB361F2784D000A76530 /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -389,15 +409,19 @@
 				3FB5C6E31F25C38900CA8541 /* CollectionHeaderView.swift in Sources */,
 				3F99DD491F23A90D0012CEA2 /* UIColor-Extension.swift in Sources */,
 				3F26255D1F24DE75006DD66F /* RecommendViewController.swift in Sources */,
+				3F67DB391F278DC300A76530 /* AnchorGroup.swift in Sources */,
 				3FB174861F21B5B000F3A5C5 /* MainViewController.swift in Sources */,
 				3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */,
 				3F99DD471F23A6F90012CEA2 /* PageContentView.swift in Sources */,
 				3FB1748B1F21B9DA00F3A5C5 /* UIBarButtonItem-Extension.swift in Sources */,
 				3F99DD431F238F630012CEA2 /* Common.swift in Sources */,
 				3F9CE88C1F26D39A001E48F3 /* CollectionPrettyCell.swift in Sources */,
+				3F67DB371F2784D000A76530 /* NSDate-Extension.swift in Sources */,
 				3FB5C6E71F25DCC700CA8541 /* CollectionNormalCell.swift in Sources */,
 				3F9CE8911F275E13001E48F3 /* NetworkTools.swift in Sources */,
 				3FB174881F21B62200F3A5C5 /* HomeViewController.swift in Sources */,
+				3F67DB351F27817800A76530 /* RecommendViewModel.swift in Sources */,
+				3F67DB3B1F27903A00A76530 /* AnchorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

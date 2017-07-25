@@ -9,5 +9,16 @@
 import UIKit
 
 class CollectionHeaderView: UICollectionReusableView {
-
+    // MARK:-定义属性
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    // MARK:-Group
+    var group : AnchorGroup? {
+        didSet {
+            titleLabel.text = group?.tag_name
+            iconImageView.image = UIImage(named: group?.small_icon_url ?? "home_header_normal")
+        }
+    }
+    
 }
