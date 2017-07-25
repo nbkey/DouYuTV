@@ -17,6 +17,11 @@ class MainViewController: UITabBarController {
         addChildVC(ChildViewControllerName: "Live")
         addChildVC(ChildViewControllerName: "Column")
         addChildVC(ChildViewControllerName: "User")
+        
+        //测试接口正常
+//        NetworkTools.requestData(type: .GET, url: "https://capi.douyucdn.cn/api/v1/getbigDataRoom?client_sys=ios") { (result) in
+//            print(result)
+//        }
     }
     
     func addChildVC(ChildViewControllerName:String) {
@@ -25,5 +30,5 @@ class MainViewController: UITabBarController {
         //忘tabbar里面添加控制器
         addChildViewController(chlidVc)
         
-    }    
+    }
 }
