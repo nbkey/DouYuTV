@@ -18,7 +18,7 @@ class CollectionNormalCell: CollectionBaseCell {
             //1.传递值给父类
             super.anchor = anchor
             //2.显示昵称
-            nickNameLabel.text = anchor?.room_name
+            nickNameLabel.text = anchor?.nickname
         }
     }
 }

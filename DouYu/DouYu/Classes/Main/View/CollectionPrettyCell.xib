@@ -16,7 +16,7 @@
                 <subviews>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFX-JC-uAU">
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="NkR-B4-bBH"/>
+                            <constraint firstAttribute="width" constant="80" id="NkR-B4-bBH"/>
                             <constraint firstAttribute="height" constant="15" id="bnA-sL-wM9"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>

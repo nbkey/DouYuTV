@@ -13,6 +13,7 @@ private let kItemW : CGFloat = (kScreenWidth - 3 * kItemMargin) / 2
 private let kItemH : CGFloat = kItemW / 4 * 3
 private let kItemPrettyH : CGFloat = kItemW / 3 * 4
 private let kSectionHeaderH : CGFloat = 50
+private let kCycleViewH : CGFloat = kScreenWidth / 8 * 3
 
 private let kItemID = "normalID"
 private let kItemPrettyID = "kItemPrettyID"
@@ -22,7 +23,11 @@ private let kSectionHeaderID = "sectionHeaderID"
 class RecommendViewController: UIViewController {
     //懒加载属性
     fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel()
-    
+    fileprivate lazy var cycleView : RecommendCycleView = {
+        let cycleView = RecommendCycleView.creatRecommendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenWidth, height: kCycleViewH)
+        return cycleView
+    }()
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let frame = CGRect.zero
         let layout = UICollectionViewFlowLayout()
@@ -36,6 +41,8 @@ class RecommendViewController: UIViewController {
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
+        // MARK:-设置内边距, 可以让其显示cycleView (很重要, 不好找bug)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH, 0, 0, 0)
         //随着父控件的拉伸进行伸缩
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.dataSource = self
@@ -64,6 +71,7 @@ extension RecommendViewController {
     fileprivate func setupUI() {
         
         view.addSubview(collectionView)
+        collectionView.addSubview(cycleView)
     }
 }
 

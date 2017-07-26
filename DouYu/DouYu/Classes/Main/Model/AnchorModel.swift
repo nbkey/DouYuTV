@@ -20,14 +20,6 @@ class AnchorModel: NSObject {
     var isVertical: Int = 0
     var online_num: Int = 0
     var online: Int = 0
-//    var online: Int? {
-//        //监听
-//        didSet {
-//            if online == 0 {
-//                self.online = self.online_num
-//            }
-//        }
-//    }
     
     init(dict: [String: NSObject]) {
         super.init()
@@ -35,6 +27,9 @@ class AnchorModel: NSObject {
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
+    override func setValue(_ value: Any?, forKey key: String) {
+        super.setValue(value, forKey: key)
+    }
 }
 
 

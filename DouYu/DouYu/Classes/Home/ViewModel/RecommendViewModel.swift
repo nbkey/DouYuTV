@@ -43,7 +43,6 @@ extension RecommendViewModel {
                 let anchor = AnchorModel.init(dict: dict)
                 self.bigDataGroup.anchors.append(anchor)
             }
-            print("1加载完毕")
             //4.请求之后离开组
             dispatchGroup.leave()
         }
@@ -59,9 +58,7 @@ extension RecommendViewModel {
             for dict in dataArray {
                 let group = AnchorGroup(dict: dict)
                 self.prettyGroups.append(group)
-                print(group.tag_name)
             }
-             print("2加载完毕")
             //4>离开组
             dispatchGroup.leave()
         }
@@ -77,9 +74,7 @@ extension RecommendViewModel {
             for dict in dataArray {
                 let group = AnchorGroup(dict: dict)
                 self.anchorGroups.append(group)
-                print(group.tag_name)
             }
-             print("3加载完毕")
             //4>离开组
             dispatchGroup.leave()
         }

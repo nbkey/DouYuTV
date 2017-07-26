@@ -21,8 +21,8 @@ class AnchorGroup: NSObject {
         }
 
     }
-    var icon_url : String = ""
     var small_icon_url : String = ""
+    var icon_url : String = ""
     var tag_name : String = ""
     var tag_id : Int = 0
     var anchors:[AnchorModel] = [AnchorModel]()
@@ -36,6 +36,7 @@ class AnchorGroup: NSObject {
             guard let url = cateInfo?["icon_url"] as? String else {return}
             self.tag_name = name
             self.icon_url = url
+            self.small_icon_url = url
         }
     }
     
@@ -57,6 +58,10 @@ class AnchorGroup: NSObject {
         super.init()
     }
     
+    override func setValue(_ value: Any?, forKey key: String) {
+        super.setValue(value, forKey: key)
+    }
+    
     override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     //将我们的roomList内的元素转化成AnchorModel对象
 //    override func setValue(_ value: Any?, forKey key: String) {
@@ -65,9 +70,15 @@ class AnchorGroup: NSObject {
 //              for dict in dataArray {
 //              let anchor = AnchorModel(dict: dict)
 //              anchors.append(anchor)
+//         }
 //    }
+    
+//    override func setValue(_ value: Any?, forKey key: String) {
+//        if key == "small_icon_url" {
+//            print("走啊啊走\(value)")
 //        }
 //    }
+
 }
 /*
  room_list: [[String: NSObject]] 房间信息

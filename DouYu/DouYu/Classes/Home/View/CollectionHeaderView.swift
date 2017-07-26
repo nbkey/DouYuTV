@@ -17,7 +17,13 @@ class CollectionHeaderView: UICollectionReusableView {
     var group : AnchorGroup? {
         didSet {
             titleLabel.text = group?.tag_name
-            iconImageView.image = UIImage(named: group?.small_icon_url ?? "home_header_normal")
+            let icon : String = group?.small_icon_url ?? "home_header_hot"
+            //设置图片
+            if icon != "" && icon != "home_header_hot" {
+                iconImageView.kf.setImage(with: URL(string: icon))
+            } else {
+                iconImageView.image = UIImage(named: "home_header_hot")
+            }
         }
     }
     
