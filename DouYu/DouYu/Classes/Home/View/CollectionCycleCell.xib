@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionCycleCell" customModule="DouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="257" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="257" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_default" translatesAutoresizingMaskIntoConstraints="NO" id="SnQ-4Z-3Xi"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="We5-TG-K9Q">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="轮播名字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-au-Tpl">
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2968482448630137" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="9qc-Ef-cYO"/>
+                            <constraint firstAttribute="bottom" secondItem="Owy-au-Tpl" secondAttribute="bottom" id="DNQ-AS-uBG"/>
+                            <constraint firstItem="Owy-au-Tpl" firstAttribute="top" secondItem="We5-TG-K9Q" secondAttribute="top" id="E11-8X-cO7"/>
+                            <constraint firstItem="Owy-au-Tpl" firstAttribute="leading" secondItem="We5-TG-K9Q" secondAttribute="leading" constant="15" id="Y8N-w9-mMz"/>
+                            <constraint firstAttribute="trailing" secondItem="Owy-au-Tpl" secondAttribute="trailing" id="ZDS-M3-bv7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SnQ-4Z-3Xi" secondAttribute="trailing" id="MUh-ZD-ELa"/>
+                <constraint firstAttribute="bottom" secondItem="We5-TG-K9Q" secondAttribute="bottom" id="ORY-zr-Lrx"/>
+                <constraint firstAttribute="bottom" secondItem="SnQ-4Z-3Xi" secondAttribute="bottom" id="RRu-pM-WLt"/>
+                <constraint firstItem="We5-TG-K9Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="X1J-1A-bIr"/>
+                <constraint firstItem="SnQ-4Z-3Xi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nAY-5E-tE5"/>
+                <constraint firstAttribute="trailing" secondItem="We5-TG-K9Q" secondAttribute="trailing" id="sWO-pl-Fky"/>
+                <constraint firstItem="SnQ-4Z-3Xi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tsj-ji-BM4"/>
+            </constraints>
+            <size key="customSize" width="257" height="112"/>
+            <connections>
+                <outlet property="iconImageView" destination="SnQ-4Z-3Xi" id="tFi-ix-r4P"/>
+                <outlet property="titleLabel" destination="Owy-au-Tpl" id="S3c-gY-L7d"/>
+            </connections>
+            <point key="canvasLocation" x="-69.5" y="10"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Img_default" width="172" height="103"/>
+    </resources>
+</document>

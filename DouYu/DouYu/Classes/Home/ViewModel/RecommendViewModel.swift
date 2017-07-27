@@ -7,20 +7,24 @@
 //
 
 import UIKit
-
-private let kUrlLOL : String = "https://capi.douyucdn.cn/api/v1/getHotCate?aid=ios&client_sys=ios&time=1500951060&auth=0e6f4b29864472464216b6b4d2fec87d"
-private let kUrlPretty: String = "https://apiv2.douyucdn.cn/live/home/custom?client_sys=ios"
+//热门, 颜值, 英雄联盟
 private let kUrlHot: String = "https://capi.douyucdn.cn/api/v1/getbigDataRoom?client_sys=ios"
+private let kUrlPretty: String = "https://apiv2.douyucdn.cn/live/home/custom?client_sys=ios"
+private let kUrlLOL : String = "https://capi.douyucdn.cn/api/v1/getHotCate?aid=ios&client_sys=ios&time=1500951060&auth=0e6f4b29864472464216b6b4d2fec87d"
+//无线轮播接口
+private let kUrlCycle : String = "https://capi.douyucdn.cn/api/v1/slide/6?version=2.521&client_sys=ios"
 
 //如果用不到NSObject的一些特性, 比如KVC之类的, 就不用继承, 类更加的干净
 class RecommendViewModel {
-    var anchorGroups :[AnchorGroup] = [AnchorGroup]()
+    lazy var anchorGroups :[AnchorGroup] = [AnchorGroup]()
+    lazy var cycleModels: [CycleModel] = [CycleModel]()
     fileprivate var bigDataGroup : AnchorGroup = AnchorGroup()
     fileprivate var prettyGroups :[AnchorGroup] = [AnchorGroup]()
 }
 
 // MARK:-发送网络请求数据
 extension RecommendViewModel {
+    //请求推荐界面的三个接口
     func requestData(finishCallback: @escaping ()->()) {
         //首页接口分为三个 热门, 颜值(有三组), 英雄联盟三个接口
         
@@ -87,6 +91,21 @@ extension RecommendViewModel {
             self.anchorGroups.insert(self.bigDataGroup, at: 0)
             finishCallback()
         })
+    }
+    //请求无线轮播的接口
+    func requestCycleData(finishCallback: @escaping ()->()) {
+        NetworkTools.requestData(type: .GET, url: kUrlCycle) { (result) in
+            //1.将结果转成字典类型
+            guard let resultDict = result as? [String: NSObject] else {return}
+            //2.通过data这个key获取到对应的数据
+            guard let dataArray = resultDict["data"] as? [[String: NSObject]] else {return}
+            //3.将数组转化为模型
+            for dict in dataArray {
+                let cycle = CycleModel(dict: dict)
+                self.cycleModels.append(cycle)
+            }
+            finishCallback()
+        }
     }
 }
 
