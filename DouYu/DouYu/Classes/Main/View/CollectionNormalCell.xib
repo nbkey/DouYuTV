@@ -47,6 +47,7 @@
             <constraints>
                 <constraint firstItem="67j-Z6-jw2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="63L-Jh-Blp"/>
                 <constraint firstItem="tb5-yU-RGr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6lm-JL-Lna"/>
+                <constraint firstItem="80L-XJ-8M7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Hje-Mu-dbk"/>
                 <constraint firstAttribute="bottom" secondItem="67j-Z6-jw2" secondAttribute="bottom" constant="10" id="QZO-fX-fj0"/>
                 <constraint firstItem="67j-Z6-jw2" firstAttribute="centerY" secondItem="gEl-A4-fq1" secondAttribute="centerY" id="UmA-Yz-Im9"/>
                 <constraint firstAttribute="trailing" secondItem="tb5-yU-RGr" secondAttribute="trailing" id="Who-R7-eGj"/>
@@ -55,8 +56,7 @@
                 <constraint firstAttribute="trailing" secondItem="gEl-A4-fq1" secondAttribute="trailing" constant="5" id="ctg-w7-n8q"/>
                 <constraint firstItem="tb5-yU-RGr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="f5K-kA-rcc"/>
                 <constraint firstItem="IoM-sk-xLp" firstAttribute="bottom" secondItem="tb5-yU-RGr" secondAttribute="bottom" constant="-5" id="f70-aa-KqA"/>
-                <constraint firstItem="80L-XJ-8M7" firstAttribute="bottom" secondItem="tb5-yU-RGr" secondAttribute="bottom" constant="-5" id="fPy-QD-yU1"/>
-                <constraint firstItem="80L-XJ-8M7" firstAttribute="trailing" secondItem="tb5-yU-RGr" secondAttribute="trailing" constant="-5" id="fnR-28-0ce"/>
+                <constraint firstAttribute="trailing" secondItem="80L-XJ-8M7" secondAttribute="trailing" constant="5" id="o4r-TR-O8B"/>
                 <constraint firstItem="gEl-A4-fq1" firstAttribute="top" secondItem="tb5-yU-RGr" secondAttribute="bottom" constant="5" id="tXK-hM-fLy"/>
             </constraints>
             <size key="customSize" width="199" height="129"/>
@@ -66,7 +66,7 @@
                 <outlet property="nickNameLabel" destination="gEl-A4-fq1" id="YHP-kl-Hev"/>
                 <outlet property="onlineButton" destination="80L-XJ-8M7" id="3bu-H7-Fa6"/>
             </connections>
-            <point key="canvasLocation" x="16" y="-61"/>
+            <point key="canvasLocation" x="15.5" y="-61.5"/>
         </collectionViewCell>
     </objects>
     <resources>

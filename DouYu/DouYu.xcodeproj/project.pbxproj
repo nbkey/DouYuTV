@@ -40,6 +40,10 @@
 		3FB5C6E41F25C38900CA8541 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E21F25C38900CA8541 /* CollectionHeaderView.xib */; };
 		3FB5C6E71F25DCC700CA8541 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E51F25DCC700CA8541 /* CollectionNormalCell.swift */; };
 		3FB5C6E81F25DCC700CA8541 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FB5C6E61F25DCC700CA8541 /* CollectionNormalCell.xib */; };
+		3FCA04BF1F2B73B500728C09 /* RecommendItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA04BE1F2B73B500728C09 /* RecommendItemView.swift */; };
+		3FCA04C11F2B73C500728C09 /* RecommendItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA04C01F2B73C500728C09 /* RecommendItemView.xib */; };
+		3FF895B01F2C361C00B655D4 /* CollectionItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF895AE1F2C361C00B655D4 /* CollectionItemCell.swift */; };
+		3FF895B11F2C361C00B655D4 /* CollectionItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FF895AF1F2C361C00B655D4 /* CollectionItemCell.xib */; };
 		50E63306779A4D217053A242 /* Pods_DouYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315D55E843B270A69214C045 /* Pods_DouYu.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +84,10 @@
 		3FB5C6E21F25C38900CA8541 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 		3FB5C6E51F25DCC700CA8541 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		3FB5C6E61F25DCC700CA8541 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		3FCA04BE1F2B73B500728C09 /* RecommendItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendItemView.swift; sourceTree = "<group>"; };
+		3FCA04C01F2B73C500728C09 /* RecommendItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendItemView.xib; sourceTree = "<group>"; };
+		3FF895AE1F2C361C00B655D4 /* CollectionItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionItemCell.swift; sourceTree = "<group>"; };
+		3FF895AF1F2C361C00B655D4 /* CollectionItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItemCell.xib; sourceTree = "<group>"; };
 		525DBECBCFE28202DFF3D872 /* Pods-DouYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYu.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYu/Pods-DouYu.release.xcconfig"; sourceTree = "<group>"; };
 		9E873A697BDAF1AA16D1FB47 /* Pods-DouYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYu/Pods-DouYu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +255,10 @@
 				3F03348E1F28D3B200905EFE /* RecommendCycleView.xib */,
 				3F932F921F29F46F0048880E /* CollectionCycleCell.swift */,
 				3F932F931F29F46F0048880E /* CollectionCycleCell.xib */,
+				3FCA04BE1F2B73B500728C09 /* RecommendItemView.swift */,
+				3FCA04C01F2B73C500728C09 /* RecommendItemView.xib */,
+				3FF895AE1F2C361C00B655D4 /* CollectionItemCell.swift */,
+				3FF895AF1F2C361C00B655D4 /* CollectionItemCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,7 +369,9 @@
 			files = (
 				3FB174741F21AE8700F3A5C5 /* Main.storyboard in Resources */,
 				3FB5C6E41F25C38900CA8541 /* CollectionHeaderView.xib in Resources */,
+				3FF895B11F2C361C00B655D4 /* CollectionItemCell.xib in Resources */,
 				3FB5C6E81F25DCC700CA8541 /* CollectionNormalCell.xib in Resources */,
+				3FCA04C11F2B73C500728C09 /* RecommendItemView.xib in Resources */,
 				3FB174581F217EFB00F3A5C5 /* LaunchScreen.storyboard in Resources */,
 				3FB174551F217EFB00F3A5C5 /* Assets.xcassets in Resources */,
 				3FB174781F21AEE100F3A5C5 /* Live.storyboard in Resources */,
@@ -431,6 +445,7 @@
 				3F99DD491F23A90D0012CEA2 /* UIColor-Extension.swift in Sources */,
 				3F26255D1F24DE75006DD66F /* RecommendViewController.swift in Sources */,
 				3F67DB391F278DC300A76530 /* AnchorGroup.swift in Sources */,
+				3FCA04BF1F2B73B500728C09 /* RecommendItemView.swift in Sources */,
 				3FB174861F21B5B000F3A5C5 /* MainViewController.swift in Sources */,
 				3FB1744E1F217EFB00F3A5C5 /* AppDelegate.swift in Sources */,
 				3F932F941F29F46F0048880E /* CollectionCycleCell.swift in Sources */,
@@ -444,6 +459,7 @@
 				3FB5C6E71F25DCC700CA8541 /* CollectionNormalCell.swift in Sources */,
 				3F9CE8911F275E13001E48F3 /* NetworkTools.swift in Sources */,
 				3FB174881F21B62200F3A5C5 /* HomeViewController.swift in Sources */,
+				3FF895B01F2C361C00B655D4 /* CollectionItemCell.swift in Sources */,
 				3F67DB351F27817800A76530 /* RecommendViewModel.swift in Sources */,
 				3F67DB3B1F27903A00A76530 /* AnchorModel.swift in Sources */,
 			);

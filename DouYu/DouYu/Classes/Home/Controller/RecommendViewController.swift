@@ -14,6 +14,8 @@ private let kItemH : CGFloat = kItemW / 4 * 3
 private let kItemPrettyH : CGFloat = kItemW / 3 * 4
 private let kSectionHeaderH : CGFloat = 50
 private let kCycleViewH : CGFloat = kScreenWidth / 8 * 3
+private let kItemViewH : CGFloat = ((kScreenWidth / 4) * 1.0)
+
 
 private let kItemID = "normalID"
 private let kItemPrettyID = "kItemPrettyID"
@@ -25,8 +27,13 @@ class RecommendViewController: UIViewController {
     fileprivate lazy var recommendVM : RecommendViewModel = RecommendViewModel()
     fileprivate lazy var cycleView : RecommendCycleView = {
         let cycleView = RecommendCycleView.creatRecommendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenWidth, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kItemViewH), width: kScreenWidth, height: kCycleViewH)
         return cycleView
+    }()
+    fileprivate lazy var itemView : RecommendItemView = {
+        let itemView = RecommendItemView.creatRecommendItemView()
+        itemView.frame = CGRect(x: 0, y: -kItemViewH, width: kScreenWidth, height: kItemViewH)
+        return itemView
     }()
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let frame = CGRect.zero
@@ -42,7 +49,7 @@ class RecommendViewController: UIViewController {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
         // MARK:-设置内边距, 可以让其显示cycleView (很重要, 不好找bug)
-        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(kCycleViewH + kItemViewH, 0, 0, 0)
         //随着父控件的拉伸进行伸缩
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.dataSource = self
@@ -66,6 +73,8 @@ class RecommendViewController: UIViewController {
         
         recommendVM.requestCycleData {
             self.cycleView.cycleModels = self.recommendVM.cycleModels
+            //为了同时加载
+            self.itemView.cycleModels = self.recommendVM.cycleModels
         }
     }
 }
@@ -73,9 +82,9 @@ class RecommendViewController: UIViewController {
 // MARK:-设置UI
 extension RecommendViewController {
     fileprivate func setupUI() {
-        
         view.addSubview(collectionView)
         collectionView.addSubview(cycleView)
+        collectionView.addSubview(itemView)
     }
 }
 

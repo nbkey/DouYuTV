@@ -17,8 +17,7 @@ class CollectionCycleCell: UICollectionViewCell {
         didSet {
             titleLabel.text = cycleModel?.title
             let iconUrl = URL(string: cycleModel?.pic_url ?? "")
-            iconImageView.kf.setImage(with: iconUrl)
+            iconImageView.kf.setImage(with: iconUrl, placeholder: UIImage(named: "默认banner图"))
         }
     }
-
 }

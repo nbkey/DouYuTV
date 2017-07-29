@@ -35,7 +35,6 @@ class RecommendCycleView: UIView {
         super.awakeFromNib()
         // MARK:-设置内边距, 可以让其显示cycleView (很重要, 不好找bug)设置该空间不随着父控件的拉伸而拉伸
         autoresizingMask = UIViewAutoresizing()
-//        collectionView.backgroundColor = UIColor.green
 //        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleCellID)
         collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleCellID)
     }
@@ -56,7 +55,6 @@ class RecommendCycleView: UIView {
 extension RecommendCycleView {
     class func creatRecommendCycleView()->RecommendCycleView {
         let cycleView = Bundle.main.loadNibNamed("RecommendCycleView", owner: nil, options: nil)?.first as! RecommendCycleView
-        cycleView.backgroundColor = UIColor.red
         return cycleView
     }
 }
@@ -69,8 +67,6 @@ extension RecommendCycleView:UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleCellID, for: indexPath) as! CollectionCycleCell
-        cell.backgroundColor = indexPath.item % 2 == 1 ? UIColor.red : UIColor.black
-        
         let cycleModel = cycleModels?[indexPath.item % cycleModels!.count]
         cell.cycleModel = cycleModel
         

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionItemCell" customModule="DouYu" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全部直播" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tw-7w-fcT">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="P8E-6E-sQz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O2n-oy-ZUn"/>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="O2n-oy-ZUn" secondAttribute="trailing" constant="30" id="AJm-7e-1jF"/>
+                <constraint firstItem="4tw-7w-fcT" firstAttribute="top" secondItem="O2n-oy-ZUn" secondAttribute="bottom" constant="10" id="IJl-ja-3mq"/>
+                <constraint firstItem="O2n-oy-ZUn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="T0U-Ea-xEV"/>
+                <constraint firstItem="O2n-oy-ZUn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="a0s-7l-M7b"/>
+                <constraint firstAttribute="bottom" secondItem="4tw-7w-fcT" secondAttribute="bottom" constant="10" id="nhh-Dl-Zwd"/>
+                <constraint firstItem="4tw-7w-fcT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rOn-fR-N7V"/>
+            </constraints>
+            <size key="customSize" width="123" height="127"/>
+            <connections>
+                <outlet property="iconImageView" destination="O2n-oy-ZUn" id="D0c-IA-5JU"/>
+                <outlet property="titileLabel" destination="4tw-7w-fcT" id="6rX-xO-By3"/>
+            </connections>
+            <point key="canvasLocation" x="-115" y="-61"/>
+        </collectionViewCell>
+    </objects>
+</document>

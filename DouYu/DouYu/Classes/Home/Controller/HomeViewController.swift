@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     // MARK:-懒加载
     fileprivate lazy var pageTitleView :PageTitleView = {[weak self] in
         let frame = CGRect(x: 0, y: kNavigationH, width: kScreenWidth, height:  kTitleViewH)
-        let titles = ["推荐", "手游","娱乐啊啊", "游戏啊", "趣玩"]
+        let titles = ["推荐", "手游","娱乐", "游戏", "趣玩"]
         let pageTitleView = PageTitleView(frame: frame, titles: titles)
         pageTitleView.delegate = self
         
@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
         }
         let pageContentView = PageContentView(frame: frame, childViewControllers: childVCs, parentViewController: self)
         pageContentView.delegate = self
+        
         return pageContentView
     }()
     
